@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
   <title>Local Pet Adoption - Contact Us</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Contact Us</h1>
@@ -18,18 +19,35 @@
 
   <h2>Contact Form</h2>
   <form action="/contact" method="post">
-    <label for="name">Your Name:</label><br>
-    <input type="text" id="name" name="name"><br><br>
+    <label for="name">Your Name:</label><br />
+    <input type="text" id="name" name="name" /><br /><br />
 
-    <label for="email">Your Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
+    <label for="contactMethod">How should we contact you?</label><br />
+    <select id="contactMethod" name="contactMethod">
+      <option value="">Select One</option>
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+    </select><br /><br />
 
-    <label for="message">Your Message:</label><br>
-    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+    <div id="emailBox" class="contact-box" style="display:none;">
+      <label for="emailInput">Enter your email:</label><br />
+      <input type="email" id="emailInput" name="email" placeholder="you@example.com" />
+    </div>
 
-    <input type="submit" value="Send">
+    <div id="phoneBox" class="contact-box" style="display:none;">
+      <label for="phoneInput">Enter your phone:</label><br />
+      <input type="tel" id="phoneInput" name="phone" placeholder="xxx-xxx-xxxx" />
+    </div>
+    <br />
+
+    <label for="message">Your Message:</label><br />
+    <textarea id="message" name="message" rows="4" cols="40"></textarea><br /><br />
+
+    <input type="submit" value="Send" />
   </form>
 
   <p>&copy; 2025 Local Pet Adoption</p>
+
+  <script src="js/contact.js" defer></script>
 </body>
 </html>
