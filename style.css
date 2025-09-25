@@ -182,3 +182,13 @@ input[type="submit"]:hover {
   color: #f6e27a;
   text-decoration: none;
 }
+
+/* ----- Contact page small tweaks ----- */
+.contact-box {
+  margin-top: 8px;
+  padding: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
