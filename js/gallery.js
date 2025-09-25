@@ -10,10 +10,18 @@ var captionTexts = [
 ];
 
 var descTexts = [
-  "Description for Image 1","Description for Image 2","Description for Image 3",
-  "Description for Image 4","Description for Image 5","Description for Image 6",
-  "Description for Image 7","Description for Image 8","Description for Image 9","Description for Image 10"
+  "A young deer exploring the forest during early morning light.",
+  "The breathtaking view of Preikestolen cliff in Norway overlooking the fjord.",
+  "A mighty eagle spreading its wings mid-flight in the open sky.",
+  "A powerful waterfall creating a rainbow in the mist.",
+  "The iconic Yosemite Valley cliffs surrounded by evergreen trees.",
+  "Dramatic coastal cliffs with turquoise waves crashing below.",
+  "A bright orange jellyfish gracefully floating in the deep blue ocean.",
+  "Fresh red strawberries symbolizing the sweetness of summer harvest.",
+  "A group of walruses resting together on the Arctic shore.",
+  "A lioness gazing intensely, embodying strength and elegance."
 ];
+
 
 var openListTag = '<li id="photo';
 var midListTag = '">';
