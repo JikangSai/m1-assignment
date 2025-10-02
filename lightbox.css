@@ -1,0 +1,36 @@
+.backdrop{
+  z-index: 9000;
+  opacity: 0;
+  display: none;
+  position: fixed;
+  inset: 0;
+  background:#000;
+}
+.box{
+  z-index: 9001;
+  display: none;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  max-width:min(92vw,1000px);
+  max-height:90vh;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  overflow:hidden;
+}
+.box__head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.6rem .9rem; border-bottom:1px solid #eee; font-weight:600;
+}
+.box__close{
+  cursor:pointer; font-size:20px; line-height:1; background:transparent; border:0;
+}
+.box__body{
+  padding:0; background:#000;
+}
+.box__body img{
+  display:block; width:100%; height:auto; max-height:calc(90vh - 48px);
+  object-fit:contain; background:#000;
+}

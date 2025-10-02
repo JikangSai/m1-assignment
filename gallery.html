@@ -4,6 +4,18 @@
   <meta charset="UTF-8" />
   <title>Local Pet Adoption - Gallery</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    :root { --tile-h: 180px; --gap:16px; }
+    ul#gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:var(--gap); padding:0; margin:0; }
+    ul#gallery li { list-style:none; position:relative; border:1px solid #ccc; border-radius:8px; overflow:hidden; background:#fff; }
+    ul#gallery img { display:block; width:100%; height:var(--tile-h); object-fit:cover; }
+    .caption { padding:8px 10px; font-weight:bold; font-size:.95rem; color:#2c3e50; border-top:1px solid #eee; }
+    .description { position:absolute; left:8px; right:8px; bottom:calc(var(--tile-h) - 40px); background:rgba(0,0,0,.75); color:#fff; padding:8px 10px; border-radius:6px; font-size:.85rem; line-height:1.3; visibility:hidden; transform:translateY(5px); transition:all .2s ease; }
+    ul#gallery li:hover { cursor:pointer; }
+    ul#gallery li:hover .description { visibility:visible; transform:translateY(0); }
+  </style>
 </head>
 <body>
   <h1>Pet Gallery</h1>
@@ -25,9 +37,15 @@
     <p id="infoText"></p>
     <a href="#" id="infoClose">Click This To Close</a>
   </div>
-
-  <p>&copy; 2025 Local Pet Adoption</p>
-
+  <div class="backdrop" aria-hidden="true"></div>
+  <div class="box" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="box__head">
+      <div class="box__title">Preview</div>
+      <button type="button" class="box__close" aria-label="Close">×</button>
+    </div>
+    <div class="box__body"></div>
+  </div>
   <script src="js/gallery.js"></script>
+  <script src="js/lightbox.js"></script>
 </body>
 </html>
